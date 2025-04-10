@@ -25,7 +25,7 @@
             color: var(--text-color);
             margin: 0;
             padding: 20px;
-            line-height: 1.5;
+            line-height: 1.45; /* Slightly reduced from 1.5 */
             font-size: 10pt;
         }
         
@@ -39,9 +39,9 @@
             height: 297mm;
             background: #fff;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            padding: 1mm 8mm; /* Reduced top padding from 2mm to 1mm */
+            padding: 6mm 8mm; /* Slightly reduced from 1mm 8mm to make room */
             font-size: 10pt;
-            line-height: 1.5;
+            line-height: 1.45; /* Slightly reduced from 1.5 */
             color: var(--text-color);
             overflow: hidden;
         }
@@ -50,9 +50,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0.5mm 0 0.5mm 0; /* Reduced from 1mm 0 1mm 0 */
+            padding: 0.8mm 0; /* Slightly reduced from 1mm */
             border-bottom: 1px solid var(--primary-color);
-            margin-bottom: 3mm;
+            margin-bottom: 2.5mm; /* Slightly reduced from 3mm */
         }
         
         .resume-page .header-left {
@@ -63,7 +63,7 @@
             font-size: 18pt;
             font-weight: 700;
             color: var(--primary-color);
-            margin: 0 0 0.5mm 0; /* Reduced from 1mm */
+            margin: 0 0 0.8mm 0; /* Slightly reduced from 1mm */
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -71,7 +71,7 @@
         .resume-page .contact-info {
             display: flex;
             flex-wrap: wrap;
-            gap: 1mm; /* Reduced from 1.5mm */
+            gap: 1.2mm; /* Slightly reduced from 1.5mm */
             font-size: 8pt;
             font-weight: 500;
             max-width: 140mm;
@@ -96,10 +96,82 @@
         .profile-image {
             width: 20mm;
             height: 20mm;
-            margin-left: 3mm; /* Reduced from 4mm */
+            margin-left: 3mm;
             flex-shrink: 0;
         }
         
+        .resume-page .content {
+            display: flex;
+            gap: 6mm;
+            margin-top: 2.5mm; /* Slightly reduced from 3mm */
+        }
+        
+        .resume-page .left-column {
+            flex: 5.5;
+        }
+        
+        .resume-page .right-column {
+            flex: 4.5;
+            border-left: 1px solid var(--border-color);
+            padding-left: 6mm;
+        }
+        
+        .resume-page .section {
+            margin-bottom: 3.5mm; /* Slightly reduced from 4mm */
+        }
+        
+        .resume-page .section-title {
+            font-size: 12pt;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--secondary-color);
+            padding-bottom: 0.8mm; /* Slightly reduced from 1mm */
+            margin-bottom: 1.8mm; /* Slightly reduced from 2mm */
+        }
+        
+        .resume-page .section-title i {
+            color: var(--accent-color);
+            margin-right: 1.5mm;
+            font-size: 11pt;
+        }
+        
+        .resume-page p, 
+        .resume-page li {
+            margin: 0 0 1mm; /* Slightly reduced from 1.2mm */
+        }
+        
+        .resume-page .job-title, 
+        .resume-page .school-name, 
+        .resume-page .project-title {
+            font-size: 11pt;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 0.8mm; /* Slightly reduced from 1mm */
+        }
+        
+        .resume-page .job-period, 
+        .resume-page .education-period {
+            float: right;
+            font-size: 10pt;
+            font-weight: 500;
+            color: #555;
+        }
+        
+        .resume-page ul {
+            padding-left: 6mm;
+            margin: 0;
+        }
+        
+        .resume-page .project {
+            margin-bottom: 2.5mm; /* Slightly reduced from 3mm */
+        }
+        
+        .resume-page .project:not(:first-child) {
+            margin-top: 2.5mm; /* Slightly reduced from 3mm */
+        }
+        
+        /* Rest of the CSS remains unchanged */
         .profile-image img {
             width: 100%;
             height: 100%;
@@ -120,78 +192,6 @@
             color: var(--text-color);
             padding-top: 6mm;
             box-sizing: border-box;
-        }
-        
-        .resume-page .content {
-            display: flex;
-            gap: 6mm;
-            margin-top: 3mm;
-        }
-        
-        .resume-page .left-column {
-            flex: 5.5;
-        }
-        
-        .resume-page .right-column {
-            flex: 4.5;
-            border-left: 1px solid var(--border-color);
-            padding-left: 6mm;
-        }
-        
-        .resume-page .section {
-            margin-bottom: 4mm;
-        }
-        
-        .resume-page .section-title {
-            font-size: 12pt;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-transform: uppercase;
-            border-bottom: 1px solid var(--secondary-color);
-            padding-bottom: 1mm;
-            margin-bottom: 2mm;
-        }
-        
-        .resume-page .section-title i {
-            color: var(--accent-color);
-            margin-right: 1.5mm;
-            font-size: 11pt;
-        }
-        
-        .resume-page p, 
-        .resume-page li {
-            margin: 0 0 1.2mm;
-            text-align: justify;
-        }
-        
-        .resume-page .job-title, 
-        .resume-page .school-name, 
-        .resume-page .project-title {
-            font-size: 11pt;
-            font-weight: 600;
-            color: #000;
-            margin-bottom: 1mm;
-        }
-        
-        .resume-page .job-period, 
-        .resume-page .education-period {
-            float: right;
-            font-size: 10pt;
-            font-weight: 500;
-            color: #555;
-        }
-        
-        .resume-page ul {
-            padding-left: 6mm;
-            margin: 0;
-        }
-        
-        .resume-page .project {
-            margin-bottom: 3mm;
-        }
-        
-        .resume-page .project:not(:first-child) {
-            margin-top: 3mm;
         }
         
         .resume-page .project ul {
@@ -255,7 +255,7 @@
             .resume-page {
                 box-shadow: none;
                 margin: 0;
-                padding: 1mm 8mm; /* Adjusted for print */
+                padding: 6mm 8mm;
                 width: 210mm;
                 height: 297mm;
             }
@@ -271,10 +271,10 @@
                 text-align: center;
             }
             .resume-page .header-left {
-                margin-bottom: 1mm; /* Reduced for mobile */
+                margin-bottom: 1mm;
             }
             .profile-image {
-                margin: 1mm 0 0 0; /* Reduced for mobile */
+                margin: 1mm 0 0 0;
             }
             .resume-page .content {
                 flex-direction: column;
@@ -356,7 +356,7 @@
                     <div class="section">
                         <div class="section-title"><i class="fas fa-briefcase"></i>Experience</div>
                         <p class="job-title"><strong>AMD</strong> - Software Engineer <span class="job-period">July 2024 - Present</span></p>
-                        <p class="job-title"><strong>TCS</strong> - Software Engineer <span class="job-period">April 2021 - July 2023</span></p>
+                        <p class="job-title"><strong>TCS</strong> - System Engineer <span class="job-period">April 2021 - July 2023</span></p>
                     </div>
                     <div class="section">
                         <div class="section-title"><i class="fas fa-certificate"></i>Certifications</div>
